@@ -1,0 +1,104 @@
+@font-face {
+    font-family: Perfect-Dos;
+    src: url("../assets/Perfect\ DOS\ VGA\ 437\ Win.ttf");
+}
+@font-face {
+    font-family: Kitty-M;
+    src: url("../assets/PerfectDOSKittyM.ttf");
+}
+
+.title{
+    color: white;
+    text-align: center;
+    width:100%;
+    font-size: 200px;
+    font-family: Kitty-M;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+.title .m{
+    animation: slideindown 4s ease-out;
+    animation-delay: -2.3s;
+}
+.title .y1{
+    animation: slideinup 4s ease-out;
+    animation-delay: -2s;
+}
+
+.title .aum{
+    animation: foldin 8s ease-out;
+    animation-delay: -5.55s;
+    transform-origin: left center;
+
+    padding-left: 20px;
+    margin-right: 20px;
+    color:black;
+    position: sticky;
+}
+
+.title .y2{
+    animation: slideindown 4s ease-out;
+    animation-delay: -1.4s;
+}
+.title .a{
+    animation: slideindown 4s ease-out;
+    animation-delay: -1.3s;
+}
+.title .u{
+    animation: slideindown 4s ease-out;
+    animation-delay: -1.2s;
+}
+
+.title .aum::after{
+    position: absolute;
+    top:45px;
+    bottom:40px;
+    left:0;
+    right:0;
+    content:"";
+    background-color: white;
+    z-index: -1;
+}
+
+@keyframes slideinup{
+    0%{
+        opacity: 0;
+    }
+    95%{
+        opacity:0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes slideindown{
+    0%{
+        opacity: 0;
+    }
+    95%{
+        opacity:0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes foldin{
+    0%{
+        opacity:0;
+        transform: scaleX(.6);
+    }
+    95%{
+        opacity:0;
+        transform: scaleX(.6);
+    }
+    100%{
+    }
+}
