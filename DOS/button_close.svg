@@ -1,0 +1,4 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox="0 0 10 10" style="opacity:0.25;">
+<line x1="2px" y1="2px" x2="8px" y2="8px" style="stroke: black; stroke-width: 2px;" />
+<line x1="8px" y1="2px" x2="2px" y2="8px" style="stroke: black; stroke-width: 2px;" />
+</svg>

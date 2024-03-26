@@ -11,6 +11,9 @@
     font-size: 24px;
     color: white;
 
+    pointer-events: none;
+    user-select: none;
+
     animation-delay: 0.2s;
     display: flex;
     flex-direction: column;
@@ -140,6 +143,9 @@
     font-family: 'Perfect-Dos';
     font-size: 24px;
     color: white;
+
+    pointer-events: none;
+    user-select: none;
 
     animation-delay: 0.2s;
     display: flex;
