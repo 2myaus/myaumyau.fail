@@ -1,0 +1,29 @@
+.flashwarn{
+    display:flex;
+    width:600px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashwarn button{
+    font-family: 'Perfect-Dos';
+    font-size: 24px;
+    color: white;
+    margin: 24px;
+
+    background-color: black;
+    border: 4px solid white;
+
+    cursor:pointer;
+
+}
+
+.flashwarn button:active{
+    background-color: #666;
+}

@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+        <link rel="stylesheet" type="text/css" href="css/flashwarn.css">
         <link rel="stylesheet" type="text/css" href="css/tunnel.css">
-        <link rel="stylesheet" type="text/css" href="css/titlepage.css">
+        <link rel="stylesheet" type="text/css" href="css/loadpage.css">
     </head>
-    <body style="background: black;">
-        <div class="content" style="display:none;">
-            <div class="tunnel">
+    <body>
+        <div class="flashwarn">
+            <div>
+                WARNING: This website may potentially trigger seizures for people with photosensitive epilepsy. Discretion is advised. Continue?
             </div>
-            <div class="title">
-                <a class="m">m</a>
-                <a class="y1">y</a>
-                <a class="aum">aum</a>
-                <a class="y2">y</a>
-                <a class="a">a</a>
-                <a class="u">u</a>
+            <div>
+                <button onclick="loadSiteAfterWarn();">OK</button>
+                <button onclick="">NO</button>
+            </div>
+        </div>
+        <div class="content" style="display:none;">
+            <div class="consoletext" style="display:none;">
+                <div>MYAUMYAU DOS 77</div>
+                <div style="margin-left: 100px;">(N)EKONEKO 2024</div>
+                <div>C:\MYAUMYAU><span class="typing">_</span></div>
+            </div>
+            <div class="tunnel" style="display:none;">
+            </div>
+            <div class="title" style="display:none;">
+                <div class="top" data-text="myaumyau">
+                    myaumyau
+                </div>
+                <div class="bottom" data-text="dot.fail">
+                    dot.fail
+                </div>
+            </div>
+            <div class="loadbar" style="display:none;">
+                <div class="loadtext">loading mm-d0s3<span class="dots">...</span></div>
+                <div class="bar"><div class="inner-bar"></div></div>
+            </div>
+            <div class="mm-dos" style="display:none;">
+                :P
             </div>
             <script src="js/animateintro.js"></script>
         </div>

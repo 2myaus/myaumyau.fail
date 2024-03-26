@@ -1,0 +1,233 @@
+.content{
+    --rgbsplit-scale-x: 1.007;
+    --rgbsplit-scale-y: 1.03;
+}
+
+.consoletext{
+    position:fixed;
+    top:24px;
+    left:24px;
+    font-family: 'Perfect-Dos';
+    font-size: 24px;
+    color: white;
+
+    animation-delay: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+}
+
+.title *{
+    color: transparent;
+    text-align: center;
+    width:100%;
+    font-size: 360px;
+    font-family: Kitty-M;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    user-select: none;
+
+    --slide-dist: 10px;
+
+    --rgbsplit-y-transform-default: 4px;
+}
+
+.title .top{
+    position:absolute;
+    top:0px;
+    left:0px;
+    transform:translateY(-100px);
+
+    opacity: 0;
+
+    animation: slideinup ease-out 1s;
+    animation-fill-mode: forwards;
+
+    -webkit-text-stroke: 4px #0f0;
+    mix-blend-mode: screen;
+    --rgbsplit-y-transform: calc(var(--rgbsplit-y-transform-default) * -1);
+}
+
+.title .bottom{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    transform:translateY(100px);
+
+    opacity: 0;
+
+    animation: slideindown ease-out 1s;
+    animation-fill-mode: forwards;
+
+    -webkit-text-stroke: 4px #0f0;
+    mix-blend-mode: screen;
+    --rgbsplit-scale-x: 1.01;
+    --rgbsplit-y-transform: var(--rgbsplit-y-transform-default);
+}
+
+.title *::before{
+    position: absolute;
+    top:0px;
+    left:0px;
+    transform: scale(calc(1/var(--rgbsplit-scale-x)), calc(1/var(--rgbsplit-scale-y))) translateY(calc(var(--rgbsplit-y-transform) * -1));
+    width:100%;
+    height:100%;
+    content: attr(data-text);
+    -webkit-text-stroke-width: inherit;
+    -webkit-text-stroke-color: #00f;
+
+    mix-blend-mode:screen;
+}
+
+.title *::after{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    transform: scale(var(--rgbsplit-scale-x), var(--rgbsplit-scale-y)) translateY(var(--rgbsplit-y-transform));
+    content: attr(data-text);
+    -webkit-text-stroke-width: inherit;
+    -webkit-text-stroke-color: #f00;
+
+    mix-blend-mode:screen;
+}
+
+@keyframes slideinup{
+    0%{
+        opacity: 0.25;
+        transform: translateY(var(--slide-dist));
+    }
+    /*50%{
+        opacity:1;
+        transform: translateY(var(--slide-dist));
+    }*/
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes slideindown{
+    0%{
+        opacity: 0.25;
+        transform: translateY(calc(-1 * var(--slide-dist)));
+    }
+    /*50%{
+        opacity:1;
+        transform: translateY(calc(-1 * var(--slide-dist)));
+    }*/
+    100%{
+        opacity:1;
+    }
+}
+
+.loadbar{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Perfect-Dos';
+    font-size: 24px;
+    color: white;
+
+    animation-delay: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loadbar > .loadtext{
+    padding-left: calc(50% - 100px);
+}
+
+.loadbar > .bar{
+    width: 800px;
+    height:40px;
+    position: relative;
+    top:0;
+    left:0;
+    --border-wid: 4px;
+    border: var(--border-wid) solid #0f0;
+    mix-blend-mode: screen;
+
+    animation: bar-appear 0s linear;
+    animation-delay: 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+
+    box-sizing: border-box;
+
+}
+
+.loadbar > .bar::before{
+    position:absolute;
+    top:calc(var(--border-wid) * -1);
+    left:calc(var(--border-wid) * -1);
+    width:100%;
+    height:100%;
+    content:"";
+    border: inherit;
+    border-color: #00f;
+    mix-blend-mode: inherit;
+    transform:scale(calc(1/var(--rgbsplit-scale-x)), calc(1/var(--rgbsplit-scale-y)));
+}
+
+.loadbar > .bar::after{
+    position:absolute;
+    top:calc(var(--border-wid) * -1);
+    left:calc(var(--border-wid) * -1);
+    width:100%;
+    height:100%;
+    content:"";
+    border: inherit;
+    border-color: #f00;
+    mix-blend-mode: inherit;
+    transform: scale(var(--rgbsplit-scale-x), var(--rgbsplit-scale-y));
+
+}
+
+
+
+.loadbar > .bar > .inner-bar{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width: 0;
+
+    animation: bar-fill 2s linear;
+    animation-delay: 0.3s;
+
+    animation-fill-mode: forwards;
+    background-color: #fff;
+}
+
+@keyframes bar-appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes bar-fill{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}

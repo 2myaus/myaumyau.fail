@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Perfect-Dos;
+    src: url("../assets/Perfect\ DOS\ VGA\ 437\ Win.ttf");
+}
+@font-face {
+    font-family: Kitty-M;
+    src: url("../assets/PerfectDOSKittyM.ttf");
+}
+
+body{
+    font-family: 'Perfect-Dos';
+    font-size: 24px;
+    color: white;
+    margin: 24px;
+
+    background: black;
+}
+
+.content{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
