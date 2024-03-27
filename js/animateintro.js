@@ -77,7 +77,7 @@ function playIntro(){
             }, 1200);
             return;
         }
-        setTimeout(typeNextStartChar, 200);
+        setTimeout(typeNextStartChar, 100);
     }
     setTimeout(typeNextStartChar, 2000);
 
