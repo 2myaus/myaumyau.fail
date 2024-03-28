@@ -33,7 +33,7 @@
     color: transparent;
     text-align: center;
     width:100%;
-    font-size: 360px;
+    font-size: 20vw;
     font-family: Kitty-M;
     display:flex;
     justify-content: center;
@@ -50,7 +50,7 @@
     position:absolute;
     top:0px;
     left:0px;
-    transform:translateY(-100px);
+    /*transform:translateY(-100px);*/
 
     opacity: 0;
 
@@ -66,7 +66,7 @@
     position:absolute;
     bottom:0px;
     left:0px;
-    transform:translateY(100px);
+    /*transform:translateY(100px);*/
 
     opacity: 0;
 
