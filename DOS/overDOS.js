@@ -288,7 +288,7 @@ function updateNavbarWindowStates(){
     }
 }
 
-MAIN_VIEW.addEventListener("click", (click_event) => {
+MAIN_VIEW.addEventListener("mousedown", (click_event) => {
     let parentIconElement = getParentIcon(click_event.target);
 
     if(lastclick && parentIconElement && parentIconElement.classList.contains("active")){
