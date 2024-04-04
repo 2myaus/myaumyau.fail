@@ -78,7 +78,7 @@
     bottom:0;
     left:50%;
     transform-origin: bottom center;
-    transform: translateX(-50%) perspective(120vh) rotateX(66deg);
+    transform: translateX(-50%) perspective(120vh) rotateX(65deg);
     width:500vw;
     height:300vh;
 
